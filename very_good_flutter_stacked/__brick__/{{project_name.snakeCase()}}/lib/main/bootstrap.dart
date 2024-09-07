@@ -17,6 +17,8 @@ Future<void> bootstrap({
     ]);
 
     await setupLocator();
+    setupDialogUi();
+    setupBottomSheetUi();
 
     runApp(
       await builder(),
