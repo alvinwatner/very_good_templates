@@ -1,4 +1,4 @@
-import 'package:steve/models/enums/flavor.dart';
+import 'package:{{project_name.snakeCase()}}/models/enums/flavor.dart';
 
 /// {@template flavors}
 /// Stores current app flavor.

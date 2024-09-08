@@ -1,0 +1,39 @@
+name: {{project_name.snakeCase()}}_ui
+description: {{project_name.pascalCase()}} UI Component Library
+version: 0.0.1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: ">=3.22.3"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  easy_debounce: ^2.0.3
+  flutter_svg: ^2.0.10+1
+  intl: ^0.19.0
+  json_annotation: ^4.8.1
+  lottie: ^3.1.2
+  lucide_icons_flutter: ^1.1.2
+  phone_form_field: ^9.2.3
+
+dev_dependencies:
+  build_runner: 2.4.9
+  flutter_gen_runner: 5.4.0
+  flutter_lints: ^3.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/fonts/
+    - assets/images/
+    - assets/icons/
+    - assets/lotties/
+
+flutter_gen:
+  output: lib/generated/
+  integrations:
+    flutter_svg: true
+    lottie: true

@@ -4,7 +4,6 @@ import 'package:{{project_name.snakeCase()}}/ui/views/home/home_view.dart';
 import 'package:{{project_name.snakeCase()}}/ui/views/startup/startup_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
-import 'package:{{project_name.snakeCase()}}/ui/views/login/login_view.dart';
 // @stacked-import
 
 @StackedApp(
