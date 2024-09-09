@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:gap/gap.dart';
 import 'package:stacked/stacked.dart';
-import 'package:{{project_name.snakeCase()}}/ui/common/ui_helpers.dart';
 
 import 'startup_viewmodel.dart';
 
@@ -20,14 +20,14 @@ class StartupView extends StackedView<StartupViewModel> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              '${{project_name.pascalCase()}}',
+              '{{project_name.pascalCase()}}',
               style: TextStyle(fontSize: 40, fontWeight: FontWeight.w900),
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text('Loading ...', style: TextStyle(fontSize: 16)),
-                horizontalSpaceSmall,
+                Gap(10),
                 SizedBox(
                   width: 16,
                   height: 16,

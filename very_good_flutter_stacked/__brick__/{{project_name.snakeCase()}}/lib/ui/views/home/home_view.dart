@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:stacked/stacked.dart';
 import 'package:{{project_name.snakeCase()}}/ui/common/app_colors.dart';
 import 'package:{{project_name.snakeCase()}}/ui/common/ui_helpers.dart';
@@ -23,7 +24,7 @@ class HomeView extends StackedView<HomeViewModel> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                verticalSpaceLarge,
+                const Gap(50),
                 Column(
                   children: [
                     const Text(
@@ -33,7 +34,7 @@ class HomeView extends StackedView<HomeViewModel> {
                         fontWeight: FontWeight.w900,
                       ),
                     ),
-                    verticalSpaceMedium,
+                    const Gap(25),
                     MaterialButton(
                       color: Colors.black,
                       onPressed: viewModel.incrementCounter,
@@ -48,7 +49,7 @@ class HomeView extends StackedView<HomeViewModel> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     MaterialButton(
-                      color: kcDarkGreyColor,
+                      color: Colors.grey,
                       onPressed: viewModel.showDialog,
                       child: const Text(
                         'Show Dialog',
@@ -58,7 +59,7 @@ class HomeView extends StackedView<HomeViewModel> {
                       ),
                     ),
                     MaterialButton(
-                      color: kcDarkGreyColor,
+                      color: Colors.grey,
                       onPressed: viewModel.showBottomSheet,
                       child: const Text(
                         'Show Bottom Sheet',

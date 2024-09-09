@@ -2,7 +2,6 @@ import 'package:{{project_name.snakeCase()}}/l10n/supported_locales.dart';
 import 'package:{{project_name.snakeCase()}}/app/app.router.dart';
 import 'package:{{project_name.snakeCase()}}/observer/screen_observer.dart';
 import 'package:{{project_name.snakeCase()}}/ui/views/app/app_viewmodel.dart';
-import 'package:{{project_name.snakeCase()}}_ui/{{project_name.snakeCase()}}_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
@@ -36,7 +35,6 @@ class _App extends ViewModelWidget<AppViewModel> {
           FocusManager.instance.primaryFocus?.unfocus();
         },
         child: MaterialApp(
-          theme: {{project_name.camelCase()}}Theme.themeData,
           initialRoute: Routes.startupView,
           onGenerateRoute: StackedRouter().onGenerateRoute,
           navigatorKey: StackedService.navigatorKey,
@@ -47,7 +45,7 @@ class _App extends ViewModelWidget<AppViewModel> {
           localizationsDelegates: localizationsDelegates,
           supportedLocales: supportedLocales,
         ),
-      ),     
+      ),
     );
   }
 }

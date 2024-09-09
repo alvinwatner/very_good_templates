@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:{{project_name.snakeCase()}}/ui/common/app_colors.dart';
-import 'package:{{project_name.snakeCase()}}/ui/common/ui_helpers.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
-
-import 'notice_sheet_model.dart';
+import 'package:{{project_name.snakeCase()}}/ui/bottom_sheets/notice/notice_sheet_model.dart';
+import 'package:{{project_name.snakeCase()}}/ui/common/app_colors.dart';
+import 'package:{{project_name.snakeCase()}}/ui/common/ui_helpers.dart';
 
 class NoticeSheet extends StackedView<NoticeSheetModel> {
   final Function(SheetResponse)? completer;

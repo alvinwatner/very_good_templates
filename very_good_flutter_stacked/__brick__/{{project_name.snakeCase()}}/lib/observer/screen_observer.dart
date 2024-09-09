@@ -1,7 +1,4 @@
-import 'package:{{project_name.snakeCase()}}_ui/{{project_name.snakeCase()}}_ui.dart';
 import 'package:{{project_name.snakeCase()}}/app/app.locator.dart';
-import 'package:{{project_name.snakeCase()}}/services/analytic_service.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// The [ScreenObserver] is a [NavigatorObserver] that
@@ -9,7 +6,7 @@ import 'package:flutter/material.dart';
 class ScreenObserver extends NavigatorObserver {
   ScreenObserver();
 
-  final _analyticService = locator<AnalyticService>();
+  // final _analyticService = locator<AnalyticService>();
 
   @override
   void didPush(Route<dynamic> route, Route<dynamic>? previousRoute) {
@@ -40,7 +37,7 @@ class ScreenObserver extends NavigatorObserver {
   void _trackScreenView(Route<dynamic> route) {
     final screenName = _defaultNameExtractor(route.settings);
     if (screenName != null) {
-      _analyticService.trackScreen(screenName);
+      // _analyticService.trackScreen(screenName);
     }
   }
 }
@@ -57,8 +54,7 @@ String? _defaultNameExtractor(RouteSettings settings) {
   }
 
   if (routeName!.contains('BottomSheet')) {
-    final sheetName =
-        routeName.split('.').last.split('_').first.camelToKebabCase;
+    final sheetName = routeName.split('.').last.split('_').first;
     return '$sheetName-bottom-sheet';
   }
 

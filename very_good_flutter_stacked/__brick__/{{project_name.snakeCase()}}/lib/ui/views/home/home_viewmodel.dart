@@ -1,7 +1,6 @@
-import 'package:my_first_app/app/app.bottomsheets.dart';
-import 'package:my_first_app/app/app.dialogs.dart';
-import 'package:my_first_app/app/app.locator.dart';
-import 'package:my_first_app/ui/common/app_strings.dart';
+import 'package:{{project_name.snakeCase()}}/app/app.bottomsheets.dart';
+import 'package:{{project_name.snakeCase()}}/app/app.dialogs.dart';
+import 'package:{{project_name.snakeCase()}}/app/app.locator.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
@@ -29,8 +28,8 @@ class HomeViewModel extends BaseViewModel {
   void showBottomSheet() {
     _bottomSheetService.showCustomSheet(
       variant: BottomSheetType.notice,
-      title: ksHomeBottomSheetTitle,
-      description: ksHomeBottomSheetDescription,
+      title: 'title',
+      description: 'desc',
     );
   }
 }
